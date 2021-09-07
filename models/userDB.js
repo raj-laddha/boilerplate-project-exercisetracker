@@ -4,9 +4,18 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
     username: String,
     log: [{
-        description: String,
-        duration: Number,
-        date: Date
+        description: {
+          type: String,
+          required: true
+        },
+        duration: {
+          type: Number,
+          required: true
+        },
+        date: {
+          type: Date,
+          required: true
+        }
     }]
 });
 
